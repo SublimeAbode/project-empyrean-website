@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-12-28 Sat 15:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Empyrean</title>
+<meta name="author" content="Shashank Rajesh" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Project Empyrean
+<br />
+<span class="subtitle">INITIAL DRAFT &#x2013; WORK IN PROGRESS</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgba55be6">1. The Experience of Discontentment</a></li>
+<li><a href="#orgc513e44">2. Suppression and Cessation</a></li>
+<li><a href="#org13fef04">3. The Opportunity of  Volition</a></li>
+<li><a href="#orge814e0c">4. Guidence by Knowledge</a></li>
+<li><a href="#org196a067">5. A Hypothetical Solution</a></li>
+<li><a href="#orge55239b">6. The Hard Problems</a></li>
+<li><a href="#org3390abd">7. The Maximalist Approach</a></li>
+<li><a href="#orgdbaf52a">8. Uncategorized Thoughts</a></li>
+<li><a href="#org348aada">9. Archive&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></a></li>
+</ul>
+</div>
+</div>
+<p>
+The fundamental problem of existence is discontentment arising together with craving.
+</p>
+
+<p>
+Discontentment is that subjective phenomenon which typically underlies the entire range of undesirable states &#x2013; boredom, irritation, discomfort, disturbance, annoyance, longing, pain, distress, suffering, sorrow, lamentation, despair &#x2013; that factor underlying all these states of psychological stress is discontentment, and it arises together with craving that is the personal attraction and aversion to objects of consciousness.
+</p>
+
+<p>
+Project Empyrean seeks epistemically certain solutions to this fundamental problem of discontentment.
+</p>
+<div id="outline-container-orgba55be6" class="outline-2">
+<h2 id="orgba55be6"><span class="section-number-2">1.</span> The Experience of Discontentment</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Discontentment is is a dynamic process of craving &#x2013; personal attraction and aversion to objects of consciousness. Unpleasant mental stress arises together with this craving, which itself tends to become an object of aversion. Thus, desire itself becomes undesired. Wanting itself becomes unwanted. From the subtlest forms of boredom to the most abject forms of suffering, such is nature of all shades of discontentment.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc513e44" class="outline-2">
+<h2 id="orgc513e44"><span class="section-number-2">2.</span> Suppression and Cessation</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+There are two forms to the attentuation of discontentment. The first and most conventional is that of satisfaction. When one gets what they want, their wishes fulfiled, craving satiated, that person is said to be happy and content. Posessing whatever is sought after, accompanied by pleasant feelings, their craving is temporarily abated. Whatever forms of pleasure and enjoyment exist, this is the satisfaction of craving which leads to the reduction of discontentment &#x2013; mundane happiness. But,  by seeing the self-defeating struggle of attraction and aversion and letting go of this craving directly, one is able to minimize their discontentment independent of the objects of their desire.
+</p>
+
+<p>
+All solutions to this fundemental problem operate on these two mechanics. Profound contentment can be attained by having much and wanting little. But with the complete cessation of craving all together, stainless and without a trace left over, there comes an even greater possibility of complete liberation from all strife and objection, supreme happiness that is permanant and measureless.
+</p>
+</div>
+</div>
+<div id="outline-container-org13fef04" class="outline-2">
+<h2 id="org13fef04"><span class="section-number-2">3.</span> The Opportunity of  Volition</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+With the advent of free-will and causality comes the great opportunity for the minimization of discontentment in both present and future. Insofar as discontentment is governed by causality, and where causes are put in place by way volitional action, each and every choice can be made condusive to the maximization of contentment in the future such that they bring forth pleasant objects, dispell unpleasant objects, and reduce the occurence of that craving which is the very cause of discontentment.
+</p>
+</div>
+</div>
+<div id="outline-container-orge814e0c" class="outline-2">
+<h2 id="orge814e0c"><span class="section-number-2">4.</span> Guidence by Knowledge</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Knowledge is that reference by which one is able to make favorable choices. With perfect knowledge, any volition that may come to be has the potential to be absolutely optimal to the maximization of contentment in the future. Aware of the consequences of their action, prudent and conscientious, the astute secure their happiness by acting according to varying degrees of correct knowledge. Any system which is fully understood is considered to be solved &#x2013; knowledge is the key to solving this maze of existence.
+</p>
+</div>
+</div>
+<div id="outline-container-org196a067" class="outline-2">
+<h2 id="org196a067"><span class="section-number-2">5.</span> A Hypothetical Solution</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The essence of one potential ideal is attained through the total fulfilment of either of the factors governing discontentment. Getting exactly and whatever one wants immediately, there is the total fulfilment of satisfaction. And yet want nothing at all indefinitely, there is the total fulfilment by relinquishment. With the knowledge of the attainment and maintainence of this ideal state, acting in accordance whenever there is an opportunity for volition, one exists with supreme happiness in perpetuity.
+</p>
+
+<p>
+And yet descending down from this ideal state by the reduction of either factors of fulfilment, the resulting conditions are still highly desirable. So long as craving is maintained below a theshold through its satisfaction and relinquishment, one abides in a heaveanly abode. Whatever paradisical state of existence one is able to conceive with their minds, it is by this that it may be attained.
+</p>
+</div>
+</div>
+<div id="outline-container-orge55239b" class="outline-2">
+<h2 id="orge55239b"><span class="section-number-2">6.</span> The Hard Problems</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+In this chasm of ignorance, there is much that is still in doubt. Here are a selection of hard problems which are to be solved in pursuit of correct volition:
+</p>
+
+<ul class="org-ul">
+<li>Unpredictability of craving</li>
+<li>Unpredictability of obtaining pleasant objects</li>
+<li>Unpredictability of avoiding unpleasant objects</li>
+<li>Death and the afterlife</li>
+<li>Stability of discontentment and its mechanism</li>
+<li>Opportunity for volition</li>
+<li>Persistence of knowledge</li>
+<li>External causality independent of volition</li>
+<li>Epistemic certainty of knowledge</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3390abd" class="outline-2">
+<h2 id="org3390abd"><span class="section-number-2">7.</span> The Maximalist Approach</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+An initial effort to uncover true knowledge is envisioned in the form of informational maximalism. Through the gathering and computer analysis of all available propositional information pertinent to the problem at hand, and by its categorization and attribution according to its epistemic certaintude, it is possible to attain a best-effort delivery of knowledge by which choices of greatest certainty can be made by the total fulfilment of mundane empirical analysis.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdbaf52a" class="outline-2">
+<h2 id="orgdbaf52a"><span class="section-number-2">8.</span> Uncategorized Thoughts</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Herein a collection of uncategorized thoughts and musings in relation to the project:
+</p>
+
+<ul class="org-ul">
+<li><a href="Thoughts.html">Thoughts</a></li>
+<li><a href="Heaven.html">Heaven</a></li>
+<li><a href="Devas.html">Devas</a></li>
+<li><a href="Desire.html">Desire</a></li>
+<li><a href="Buddhavacana.html">Buddhavacana</a></li>
+<li><a href="Tasks.html">Tasks</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org348aada" class="outline-2">
+<h2 id="org348aada"><span class="section-number-2">9.</span> Archive&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shashank Rajesh</p>
+<p class="date">Created: 2024-12-28 Sat 15:45</p>
+</div>
+</body>
+</html>

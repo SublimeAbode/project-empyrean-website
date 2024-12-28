@@ -1,0 +1,1947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-12-28 Sat 15:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thoughts</title>
+<meta name="author" content="Shashank Rajesh" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Thoughts</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgba1c920">1. Graduated Disidentification</a></li>
+<li><a href="#org2acaf4b">2. Abstract</a></li>
+<li><a href="#orgc249a40">3. Abstract</a></li>
+<li><a href="#org14aa5f3">4. Invitation for Dispute</a></li>
+<li><a href="#orgd25dc66">5. Craving</a></li>
+<li><a href="#org911e1b3">6. Knowledge</a>
+<ul>
+<li><a href="#org77fb024">6.1. <span class="todo TODO">TODO</span> Indexing of justification</a></li>
+</ul>
+</li>
+<li><a href="#org5c033fd">7. Disidentification</a></li>
+<li><a href="#org52f0189">8. Enjoyment</a></li>
+<li><a href="#orgec2dd7d">9. Hyperskeptical Analysis</a></li>
+<li><a href="#orge589441">10. Intro Essay</a>
+<ul>
+<li><a href="#org9c01215">10.1. The solution</a></li>
+<li><a href="#org10c969b">10.2. <span class="todo TODO">TODO</span> We want knowledge</a>
+<ul>
+<li><a href="#org5589705">10.2.1. Major areas of research</a></li>
+<li><a href="#orgf7bdfbe">10.2.2. Epistemic methods</a></li>
+</ul>
+</li>
+<li><a href="#orge75d8e4">10.3. <span class="todo TODO">TODO</span> Survey all known models</a></li>
+<li><a href="#orgeda6c27">10.4. The pursuit of mankind</a></li>
+<li><a href="#org80f3055">10.5. The actual goal: progressive infallible attainments</a></li>
+<li><a href="#org37fb7b2">10.6. Potential existing solutions</a></li>
+<li><a href="#org089912d">10.7. Epistemic certainty</a></li>
+<li><a href="#org9529e32">10.8. Plan</a></li>
+<li><a href="#org3ab35c0">10.9. Name explaination</a></li>
+<li><a href="#org015d347">10.10. Funding request and contact</a></li>
+<li><a href="#org197befa">10.11. The afterlife</a></li>
+<li><a href="#org87b83f6">10.12. The foolish and the astute</a></li>
+<li><a href="#orga772226">10.13. Possibilities of the next life</a>
+<ul>
+<li><a href="#org8165087">10.13.1. Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org179a19b">11. The Problem</a>
+<ul>
+<li><a href="#org95a6b8e">11.1. After Death</a></li>
+<li><a href="#org42cde4b">11.2. <span class="todo TODO">TODO</span> Empirically prove the superior satisfaction of monkhood</a></li>
+</ul>
+</li>
+<li><a href="#org90a1228">12. Solutions</a>
+<ul>
+<li><a href="#orgf91f295">12.1. Control</a></li>
+<li><a href="#orgbb43b08">12.2. The Human Solution</a></li>
+</ul>
+</li>
+<li><a href="#org9a359f2">13. Simplified Model of Existence</a>
+<ul>
+<li><a href="#orgf5d052a">13.1. <span class="todo TODO">TODO</span> Research the mechanics of desire</a></li>
+</ul>
+</li>
+<li><a href="#org8bc56e3">14. Birth</a></li>
+<li><a href="#orgf57e2c2">15. IP Sharing Contracts</a></li>
+<li><a href="#orgce889df">16. Satisfaction Above a Standard</a></li>
+<li><a href="#orgb5507b1">17. Timeline</a></li>
+<li><a href="#org55a5e03">18. Epistemic Certainty</a></li>
+<li><a href="#orgad06306">19. Aggregation of Testimony</a></li>
+<li><a href="#orgbd4012e">20. Drugs</a></li>
+<li><a href="#org732846a">21. Lucid Dreams</a></li>
+<li><a href="#orgaecea92">22. Base Solution</a>
+<ul>
+<li><a href="#org708531b">22.1. Body</a></li>
+</ul>
+</li>
+<li><a href="#orgf9e67ec">23. Terms</a>
+<ul>
+<li><a href="#orgd78e8b1">23.1. Stress</a></li>
+<li><a href="#org490c842">23.2. Power</a></li>
+<li><a href="#org485346a">23.3. Purity</a></li>
+</ul>
+</li>
+<li><a href="#org6261d5a">24. Provisional Axiom of Stress and its Cause</a></li>
+<li><a href="#org768a05d">25. A Similie</a></li>
+<li><a href="#org0a649d8">26. Taking Aim, Firing Shots</a></li>
+<li><a href="#org9de2860">27. Redundancy</a></li>
+<li><a href="#orgf808998">28. Rebirth</a></li>
+<li><a href="#org0e7356b">29. Kamma</a></li>
+<li><a href="#orgb527146">30. Death</a></li>
+<li><a href="#org5461a75">31. Desire</a></li>
+<li><a href="#orgaf97fed">32. Epistemology</a></li>
+<li><a href="#org3108805">33. Mind</a></li>
+<li><a href="#orgf82c4c2">34. Power of Knowledge</a></li>
+<li><a href="#org9a01aef">35. Universal Intention</a></li>
+<li><a href="#org5baecbd">36. The Ideal Desires</a></li>
+<li><a href="#org887d9b2">37. Examples</a>
+<ul>
+<li><a href="#orgd845424">37.1. Progressive house fps</a></li>
+</ul>
+</li>
+<li><a href="#orgb6b7840">38. Skepticism</a></li>
+<li><a href="#orgcdedd2f">39. The brahma viArA</a></li>
+<li><a href="#orgfb48540">40. Supernormal Powers</a></li>
+<li><a href="#org2edff69">41. Axiomatic Pragmatism</a></li>
+<li><a href="#org89abf43">42. Predictions</a></li>
+<li><a href="#org0dec9d2">43. Resolution and Identity</a></li>
+<li><a href="#org73cb0dd">44. Abundance</a></li>
+<li><a href="#org584a51f">45. Handling Desire</a></li>
+<li><a href="#orgb0d661d">46. Optimizing Desire</a></li>
+<li><a href="#orga9e6144">47. Attenuate the Identity</a></li>
+<li><a href="#org01dc15e">48. Aggregation of Testimony</a></li>
+<li><a href="#org68024bf">49. Lucid Dreams</a></li>
+<li><a href="#org7fcc271">50. Personal Instruction</a></li>
+<li><a href="#orgccefcfd">51. Brahmā and DMT Entities</a></li>
+<li><a href="#org26e18a8">52. Possible Fourth jhAna in a Dream</a></li>
+<li><a href="#org553cde3">53. Theory of Desire</a></li>
+<li><a href="#orgd966012">54. Slices of the Ultimate</a></li>
+<li><a href="#orgdd5281e">55. A New Body in a New World</a></li>
+<li><a href="#org6437c44">56. The Baffling Nature of Lucid Dreams</a></li>
+<li><a href="#orgca782d2">57. Samadhi vs Enjoyment (and Desire)</a></li>
+<li><a href="#orgb7a3559">58. Two Approaches</a></li>
+<li><a href="#orge3fa7e7">59. Karma as a Queue/Buffer</a></li>
+<li><a href="#org5b147f4">60. Steps</a></li>
+<li><a href="#orgfa63af4">61. The Better Life</a>
+<ul>
+<li><a href="#orga17b61b">61.1. The Certain Life of Humans</a></li>
+<li><a href="#org6d4bb5a">61.2. Sleep and Dreams</a></li>
+<li><a href="#orgdda9ba8">61.3. Aliens</a></li>
+<li><a href="#org0fa706d">61.4. God and the Devas</a></li>
+</ul>
+</li>
+<li><a href="#org6003214">62. Devas could extend their lives</a></li>
+<li><a href="#org06d0163">63. The way</a></li>
+<li><a href="#orgddd5a09">64. Type of relief</a></li>
+<li><a href="#org16474c4">65. Stress</a>
+<ul>
+<li><a href="#org689efa7">65.1. Stress Over Time</a></li>
+<li><a href="#orgafae78d">65.2. Preferences</a></li>
+<li><a href="#org90b29e5">65.3. Rename</a></li>
+<li><a href="#org5c96018">65.4. The Shell</a></li>
+<li><a href="#orga669cce">65.5. Gradients</a></li>
+<li><a href="#org0b3559f">65.6. Internal and External Factors</a></li>
+<li><a href="#org7c179fe">65.7. Next Gen R&amp;D</a></li>
+<li><a href="#orgf8014bb">65.8. The Essential Qualities</a></li>
+<li><a href="#org0fbbc6b">65.9. Indulgence Ration</a></li>
+</ul>
+</li>
+<li><a href="#org6eda8dd">66. The Fundamental Problem of Subjective Existence</a>
+<ul>
+<li><a href="#orgb347a24">66.1. What is a problem?</a></li>
+<li><a href="#org6aeaf77">66.2. Examples of confident happiness</a></li>
+<li><a href="#orgb6d1327">66.3. Is it possible?</a></li>
+<li><a href="#orgde20390">66.4. Causality</a></li>
+<li><a href="#org82c47f7">66.5. Subjectivity</a></li>
+<li><a href="#org825c302">66.6. Origin</a></li>
+<li><a href="#orgb92129c">66.7. Two principle manifestations</a></li>
+<li><a href="#orge749f25">66.8. Two dimensions</a></li>
+<li><a href="#orgbd637d0">66.9. Mechanics</a></li>
+<li><a href="#org829c100">66.10. Two solutions: reduction and satisfaction</a></li>
+<li><a href="#orgf68a64d">66.11. Concerns</a></li>
+<li><a href="#orgd84bc4d">66.12. Other papers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba1c920" class="outline-2">
+<h2 id="orgba1c920"><span class="section-number-2">1.</span> Graduated Disidentification</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+If you&rsquo;re gonna identify with something, then do so with something that is in your control. And ideal which is excellent and lofty, however ephermeral it may be. Abandon all other objects of identification, including inherited culture and bodily attributes. Reject the human body itself, seeing how flawed and disgusting it really is.
+</p>
+</div>
+</div>
+<div id="outline-container-org2acaf4b" class="outline-2">
+<h2 id="org2acaf4b"><span class="section-number-2">2.</span> Abstract</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Seeking epistemically certain solutions to the fundamental problem of existence.
+</p>
+
+<p>
+Herein all statements are made from the subjective standpoint.
+</p>
+
+<ul class="org-ul">
+<li>Dissatisfaction is the fundamental problem of existence.</li>
+<li>The strength of the desire and the amount of the disparity between the desired and the attained determines its magnitude.</li>
+<li>A high standard of satisfaction can be maintained through the minimization of these factors.</li>
+<li>Cessation of desire is the ultimate solution.</li>
+</ul>
+
+<p>
+Although it may be hard to see at times, desire is a volitional action. Even in dreams, desire is volitional.
+When one desires that which is readily available, he is satisfied. But when it is not, dissatisfaction arises.
+And the volitions could cause changes in experience and/or the tendency of the mind to desire this or that in the future.
+</p>
+
+<p>
+So forget about the volition for now. Lets talk choices. At the end of the day, the choices are the only thing you have direct control over. Therefore, to gain and maintain satisfaction above a threshold, you should make all the choices that are condusive to that goal. Which choices do you make?
+</p>
+
+<p>
+Assuming perfect knowlege, one would make all the ideal choices that would lead to the best possible outcome. However, I don&rsquo;t claim perfect knowledge and am not sure I would ever be able to do so. Therefore, I&rsquo;ve got to take my shots anyhow.
+</p>
+
+<p>
+Two grades of choices: deliberate and habitual. Habitual choices aren&rsquo;t necessarily bad; given the limitations of the body and mind, habituation is innevitable. And since there seems to be a great stablility to the mechanics of exietence thus far, aligining my habits to those mechanics proves to be very fruitful. So, through deliberate action establish favorable habits and maintain them. Then you act in line both deliberately and habitually.
+</p>
+
+<p>
+Additionally, make choices that lead to greateer epistemic certainty through knowledge and upgrade your habits accordingly. See the similie of the man who carried hemp; kaizen, continuous improvement by way of refining one&rsquo;s knowledge.
+</p>
+
+<p>
+So essentially there are two relevant elements here:
+</p>
+<ol class="org-ol">
+<li>Knowledge</li>
+<li>Action</li>
+</ol>
+
+<p>
+Knowledge existing for the sole purpose of guiding the action.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc249a40" class="outline-2">
+<h2 id="orgc249a40"><span class="section-number-2">3.</span> Abstract</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+The fundamental problem of existence is discontentment. It arises due to craving, is quelled by gratification, and eradicated through extinction.
+</p>
+
+<p>
+Discontentment is typically experienced in association with the range of unpleaseant phenomena. From the subtlest of boredom to the most abject of suffering, discontentment is present in all.
+</p>
+
+<p>
+The solution is arranged into a framework of volitional action. The goal is to constrain volitional action along an ideal sequence which results in the maximization of contentment in a particular fashion.
+</p>
+
+<p>
+A pure mind does not crave or cling, it remains completely unaffected.
+</p>
+
+<p>
+Just as thirst is attenuated through drink, so is craving in the mind attenuated through qualia.
+</p>
+
+<p>
+But what is the cause of craving? What will it crave and why? Is there an unconditional end to the cause of craving? Just as a fire is forever extinguished when doused in water, is it also the case when the cause of ignorance is drenched in the light of knowledge? Does this knowledge persist even after it has served its function? Need it necessarily persist to maintain this state?
+</p>
+
+<p>
+When a desirable object is apprehended, craving is intensified and the mind clings to it. The apprehension of the craving seems to presuppose this craving. Why does it occur this way? Is this response invariable to time? Is there some thing within the mind which causes it to respond this way?
+</p>
+
+<p>
+What is discontentment? It is personal objection. Whenever there is an objection, there is discontentment. Whenever there is a craving, there is discontentment, and once that craving is satisfied, there is contentment.
+</p>
+
+<p>
+This discontentment manifests itself as inclination, boredom, interest, anticipation, wishfullness, craving, longing, dissatisfaction, hunger, drive, &#x2026;, suffering, despair, &amp; torture according to its intensity.
+</p>
+
+<p>
+Now, the human solution is quite simple: become a monk and reside in the sublime abodes. Amazing. But the real focus is beyond this life&#x2026;
+</p>
+
+<p>
+So, the problem exists and it is to be minimized and eradicated. With the input of action, what what one do at every moment in pursuit of this goal?
+</p>
+</div>
+</div>
+<div id="outline-container-org14aa5f3" class="outline-2">
+<h2 id="org14aa5f3"><span class="section-number-2">4.</span> Invitation for Dispute</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Anyone who disputes the validity of this statement of the fundamental problem of existence is welcomed to raise it in the intrest of solving the actual problem.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd25dc66" class="outline-2">
+<h2 id="orgd25dc66"><span class="section-number-2">5.</span> Craving</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+What are the mechanics of craving? We wish to understand it so that it can be controlled and maintained to an ideal standard. One that is condusive to sustained contentment.
+</p>
+
+<p>
+What are the objects of craving? Can craving be restricted to only those objects which are readily obtainable? For unfulfilled craving leads to contentment. Or rather, could the needs of any craving be readily satisfied through the power of manifestation, akin to a lucid dream?
+</p>
+</div>
+</div>
+<div id="outline-container-org911e1b3" class="outline-2">
+<h2 id="org911e1b3"><span class="section-number-2">6.</span> Knowledge</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Knowledge in this context is simply a prediction. Epistemic certainty is the most accurate kind of prediction, beyond which there is only direct knowledge. We seek epistemic certainty of the maintainence of contentmment above a threshold.
+</p>
+
+<p>
+Maintainence of contentment above a threshold with and without knowledge, personal and external volition or action, internal and external conditions.
+</p>
+</div>
+<div id="outline-container-org77fb024" class="outline-3">
+<h3 id="org77fb024"><span class="section-number-3">6.1.</span> <span class="todo TODO">TODO</span> Indexing of justification</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Index, analyze, systematize, and categorize ways of epistemic justification.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c033fd" class="outline-2">
+<h2 id="org5c033fd"><span class="section-number-2">7.</span> Disidentification</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Identification is one of the most potent sources of discontentment. When that which is identified with is attacked, suffering follows. So avoid identifying with anything at all, or at the very least, reduce it only to a functional level. Once things start to go wrong, let go and completely cease identification.
+</p>
+</div>
+</div>
+<div id="outline-container-org52f0189" class="outline-2">
+<h2 id="org52f0189"><span class="section-number-2">8.</span> Enjoyment</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Craving that is continually satisfied to a very high degree.
+</p>
+</div>
+</div>
+<div id="outline-container-orgec2dd7d" class="outline-2">
+<h2 id="orgec2dd7d"><span class="section-number-2">9.</span> Hyperskeptical Analysis</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Analyze these statements with hyperskepticism. Will these truths continue to hold in the future? Will the questions and answers ever change?
+</p>
+</div>
+</div>
+<div id="outline-container-orge589441" class="outline-2">
+<h2 id="orge589441"><span class="section-number-2">10.</span> Intro Essay</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+From time immemorial mankind has pursued a single goal: the satisfaction of desire. It is a goal that is existant and evident in every human experience, one that transcends all boundries of language and culture. We all wish to be free of boredom, pain, and misery. We all wish to be well and happy, this is the single universal principle which unites all known conscious entites.
+</p>
+
+<p>
+And with the frustration of desire comes dissatisfaction, manifesting  itself in many forms. From the subtlest boredeom to the most abject of suffering, dissatisfaction is present in them all. Seeking to resolve this dissatisfaction, mankind has shaped and transformed the world in many ways, building entire civilisations of high technology in pursuit of greater satisfaction.
+</p>
+
+<p>
+But even with all this magical technology, we are still subject to this very same element of dissatisfaction that our ancestors faced many hundreds of millenia in the past. Not even the wealthiest among men, replete with the potential of catering to their every desire, is free from this common experience of boredom, pain, sickness, old age, and ultimately death.
+</p>
+
+<p>
+And with the innevitable destruction of the body comes the uncertainty of the afterlife. Does one continue to exist beyond death? Will we continue to experience this same dissatisfaction once again, at a lesser or greater extent?
+</p>
+</div>
+<div id="outline-container-org9c01215" class="outline-3">
+<h3 id="org9c01215"><span class="section-number-3">10.1.</span> The solution</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+Though enshrined in complexity, this problem of dissatisfaction can be broken down into a simple and self evident model of desire and its gratification. At the root of dissatisfaction is a craving, an objection to the current state of things and a yearning for another. When we get thirsty, we crave hydration. And when we obtain that drink, we become satisfied. This simple yet fundamental mechanic is present in every instance of subjective existence, from the subtlest notes of intrest all the way up to the heights of misery. Satisfaction is the gratification of desire.
+</p>
+
+<p>
+So the solution is quite simple: keep the mind satisfied to a high degree by empowering it with a swift potential for gratification, and maintain this state all the while remaining just as satisfied. And even better, minimize or even eradicate the desires themselves so that the very possibility of dissatisfaction becomess severed at its root. Indefinite form of happiness.
+</p>
+
+<p>
+The desirability of phenomenon seems to be influenced by a stable underlying factor.
+</p>
+
+<p>
+We seek to indefinitely minimize this dissatisfaction below a standard - perpetual happiness - through epistemic certainty.
+</p>
+</div>
+</div>
+<div id="outline-container-org10c969b" class="outline-3">
+<h3 id="org10c969b"><span class="section-number-3">10.2.</span> <span class="todo TODO">TODO</span> We want knowledge</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+Epistemic certainty pertaining to the goal.
+</p>
+</div>
+<div id="outline-container-org5589705" class="outline-4">
+<h4 id="org5589705"><span class="section-number-4">10.2.1.</span> Major areas of research</h4>
+<div class="outline-text-4" id="text-10-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org8eec83b"></a>Human psychology<br />
+<div class="outline-text-5" id="text-10-2-1-1">
+<p>
+relating to dissatisfaction in this life
+</p>
+</div>
+</li>
+<li><a id="org788e6c7"></a>Non-human psychology<br />
+<div class="outline-text-5" id="text-10-2-1-2">
+<p>
+Pertaining to animals and especially non-human intelligent beings
+</p>
+</div>
+</li>
+<li><a id="org2ae438d"></a>Death and the afterlife<br />
+<div class="outline-text-5" id="text-10-2-1-3">
+<p>
+relating to dissatisfaction in the other lives
+</p>
+</div>
+</li>
+<li><a id="org39affe9"></a>Existential metaphysics<br />
+<div class="outline-text-5" id="text-10-2-1-4">
+<p>
+Pertaining to dissatisfaction itself, and its potential irreversable cessation.
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf7bdfbe" class="outline-4">
+<h4 id="orgf7bdfbe"><span class="section-number-4">10.2.2.</span> Epistemic methods</h4>
+<div class="outline-text-4" id="text-10-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1b1eb5b"></a>Testimony<br />
+<div class="outline-text-5" id="text-10-2-2-1">
+<p>
+Of both humans and especially non-humans
+</p>
+</div>
+</li>
+<li><a id="orgeae3830"></a>Inference<br />
+<div class="outline-text-5" id="text-10-2-2-2">
+<p>
+Application of a permutation on memory
+</p>
+</div>
+</li>
+<li><a id="org604e5ef"></a>Direct perception<br />
+<div class="outline-text-5" id="text-10-2-2-3">
+<p>
+In the highest sense, awareness of objects
+</p>
+</div>
+</li>
+<li><a id="org2da0a60"></a>Higher knowledge<br />
+<div class="outline-text-5" id="text-10-2-2-4">
+<p>
+Independent of inference and infallible
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge75d8e4" class="outline-3">
+<h3 id="orge75d8e4"><span class="section-number-3">10.3.</span> <span class="todo TODO">TODO</span> Survey all known models</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+Conduct a comprehensive study of all known models of satisfaction.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeda6c27" class="outline-3">
+<h3 id="orgeda6c27"><span class="section-number-3">10.4.</span> The pursuit of mankind</h3>
+<div class="outline-text-3" id="text-10-4">
+<ul class="org-ul">
+<li>All induviduals are chasing after something</li>
+<li>From moment to moment they crave for one thing or another (provide relatable examples)</li>
+<li>Cravings both large and small</li>
+<li>Despite temporary respite, innevitably it returns (nothing good seems to ever last, its over as soon as it begins)</li>
+<li>We want something secure</li>
+</ul>
+
+
+<p>
+From time immemorial mankind has pursued satisfaction. Rejecting his current circumstances, man strives towards a superior ideal. Satiated by his attainment, he find temporary respite, only to spring foward once again to continue the cycle. Cycles that span seconds, hours, weeks, months, years, and even decades. From shifting in one&rsquo;s chair in order to establish comfort, to dedicating one&rsquo;s life in pursuit of a higher ideal, this is the nature of subjective existence - desire and satisfaction.
+</p>
+
+<ol class="org-ol">
+<li>Desire and satisfaction is the nature of subjective existence.</li>
+</ol>
+
+<p>
+Desiring freedom from the objectionable, from pain, from hunger, from discomfort, and seeking union with the desired, comfort, pleasure, happiness, we build and shape the world in many ways. From this priciple source has arisen the great civilisation of mankind. From the desire to avoid death comes the production of requisites. And with this established, the desire to attain comfort, company, arts, intellecutal, etc.
+</p>
+
+<ol class="org-ol">
+<li>Satisfaction and cessation are two solutions to the fundamental problem of desire.</li>
+
+<li>This body is incapable of providing such an ideal.</li>
+</ol>
+
+
+<ol class="org-ol">
+<li>The existence of desire and the potential for satisfaction after death is uncertain.</li>
+</ol>
+
+
+<p>
+&#x2026;
+</p>
+
+<p>
+We seek the certain minimization of desire, its maintainence with satisfaction above a standard, and even more, transcending the need for satisfaction by the irreversable destruction of the cause of desire itself, attainment of the final, unconditional, irreversable, incomprehensible goal of liberation - mukti, mosksha, nirvana.
+</p>
+
+
+<p>
+Uncover the certain path so that it may be walked by countless beings.
+</p>
+</div>
+</div>
+<div id="outline-container-org80f3055" class="outline-3">
+<h3 id="org80f3055"><span class="section-number-3">10.5.</span> The actual goal: progressive infallible attainments</h3>
+<div class="outline-text-3" id="text-10-5">
+<ul class="org-ul">
+<li>We want to attain a level below which we can no longer fall. A secure position that is not subject to failure.</li>
+<li>Show the craving over time graph</li>
+<li>Similes to provide a taste of the ideal</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org37fb7b2" class="outline-3">
+<h3 id="org37fb7b2"><span class="section-number-3">10.6.</span> Potential existing solutions</h3>
+<div class="outline-text-3" id="text-10-6">
+<ul class="org-ul">
+<li>An overview of paths</li>
+<li>Afterlife</li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org089912d" class="outline-3">
+<h3 id="org089912d"><span class="section-number-3">10.7.</span> Epistemic certainty</h3>
+<div class="outline-text-3" id="text-10-7">
+<ul class="org-ul">
+<li>Which of these are true, if any?</li>
+<li>How can one really know</li>
+<li>Maximization by syncreticism</li>
+<li>The only way to really know is to attain it</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9529e32" class="outline-3">
+<h3 id="org9529e32"><span class="section-number-3">10.8.</span> Plan</h3>
+<div class="outline-text-3" id="text-10-8">
+<ul class="org-ul">
+<li>Analysis of claims through a multitude of epistemic lenses</li>
+<li>Corroboration of claims</li>
+<li>Comparative religion</li>
+<li>Research into consciousness, craving, death, supernormal abilities, afterlife, etc.</li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3ab35c0" class="outline-3">
+<h3 id="org3ab35c0"><span class="section-number-3">10.9.</span> Name explaination</h3>
+</div>
+<div id="outline-container-org015d347" class="outline-3">
+<h3 id="org015d347"><span class="section-number-3">10.10.</span> Funding request and contact</h3>
+</div>
+
+<div id="outline-container-org197befa" class="outline-3">
+<h3 id="org197befa"><span class="section-number-3">10.11.</span> The afterlife</h3>
+<div class="outline-text-3" id="text-10-11">
+<p>
+The idea of a conscious existence beyond the death of the body has persisted throughout human history.
+</p>
+
+<p>
+Through logical analysis, we can ascertain two possibilites: a permanant cessation of subjective existence (annihalationism), or a continuation of some sort. In those cultures that posited an afterlife, they are
+</p>
+</div>
+</div>
+<div id="outline-container-org87b83f6" class="outline-3">
+<h3 id="org87b83f6"><span class="section-number-3">10.12.</span> The foolish and the astute</h3>
+<div class="outline-text-3" id="text-10-12">
+</div>
+</div>
+<div id="outline-container-orga772226" class="outline-3">
+<h3 id="orga772226"><span class="section-number-3">10.13.</span> Possibilities of the next life</h3>
+<div class="outline-text-3" id="text-10-13">
+<ul class="org-ul">
+<li>Annihilationism</li>
+<li>Eternalism</li>
+<li>Rebirth</li>
+<li>Limbo</li>
+</ul>
+</div>
+<div id="outline-container-org8165087" class="outline-4">
+<h4 id="org8165087"><span class="section-number-4">10.13.1.</span> Table</h4>
+<div class="outline-text-4" id="text-10-13-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Deathless</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org179a19b" class="outline-2">
+<h2 id="org179a19b"><span class="section-number-2">11.</span> The Problem</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Dissatisfaction is the fundamental problem of existence. It is the only problem I can see now (at the time of writing), the only problem I can remember in the past, and the only problem I can forsee in the future.  It is solved temporarily by satisfaction, and permanantly by eradication.
+</p>
+
+<p>
+Considering a unit of existence, there is desire, and there are the objects of awareness. Dissatisfaction is the disparity between the desired state of those objects and the actual. The goal is to minimize and maintain that disparity below a standard.
+</p>
+
+<p>
+Each instance of desire and awareness of objects could influence the form of both in the future, so an optimal causal sequence is sought. There are also external factors, whether or not an induvidual can control these is uncertain.
+</p>
+</div>
+<div id="outline-container-org95a6b8e" class="outline-3">
+<h3 id="org95a6b8e"><span class="section-number-3">11.1.</span> After Death</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+Dissatisfaction within the human experience is quite evident, and does not require much elaboration. The question remains: is there dissatisfaction after death?
+</p>
+</div>
+</div>
+<div id="outline-container-org42cde4b" class="outline-3">
+<h3 id="org42cde4b"><span class="section-number-3">11.2.</span> <span class="todo TODO">TODO</span> Empirically prove the superior satisfaction of monkhood</h3>
+</div>
+</div>
+<div id="outline-container-org90a1228" class="outline-2">
+<h2 id="org90a1228"><span class="section-number-2">12.</span> Solutions</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-orgf91f295" class="outline-3">
+<h3 id="orgf91f295"><span class="section-number-3">12.1.</span> Control</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+The ability to control both one&rsquo;s preferences and the objects of consciousness such that desire is constantly minimized and satisfied.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbb43b08" class="outline-3">
+<h3 id="orgbb43b08"><span class="section-number-3">12.2.</span> The Human Solution</h3>
+<div class="outline-text-3" id="text-12-2">
+<p>
+Known to me by experience, inference, and testimony, Buddhist monkhood has the greatest potential for satisfaction. Living free of mundane desire and attachment, and taking rest in the sublime abodes, there is no greater happiness on earth outside of living the holy life.
+</p>
+
+<p>
+But despite the testimony, the problem of dissatisfaction after death remains uncertain to me, so I hold off in search of a solution.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a359f2" class="outline-2">
+<h2 id="org9a359f2"><span class="section-number-2">13.</span> Simplified Model of Existence</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+For each instance in time, consider the follwing variables:
+</p>
+<ul class="org-ul">
+<li>Consciousness: pertaining to all that which is in subjective existence</li>
+<li>Judgement</li>
+<li>Desire: either positive (attraction), negative (aversion), or zero (no desire), derived by that instance of judgement on consciousness.</li>
+</ul>
+</div>
+<div id="outline-container-orgf5d052a" class="outline-3">
+<h3 id="orgf5d052a"><span class="section-number-3">13.1.</span> <span class="todo TODO">TODO</span> Research the mechanics of desire</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+If:
+</p>
+<ul class="org-ul">
+<li>C(n) = C(m)</li>
+<li>J(n) = J(m)</li>
+</ul>
+
+<p>
+Does D(n) = D(m) ?
+</p>
+
+<p>
+In other words, does the application of judgment on consciousness always yeild consistent results irrespective of its location along time?
+</p>
+
+<p>
+If yes, then desire is independent of time and potentially independent of objects outside one&rsquo;s consciousness.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8bc56e3" class="outline-2">
+<h2 id="org8bc56e3"><span class="section-number-2">14.</span> Birth</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Having been born into this world,
+</p>
+</div>
+</div>
+<div id="outline-container-orgf57e2c2" class="outline-2">
+<h2 id="orgf57e2c2"><span class="section-number-2">15.</span> IP Sharing Contracts</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Ensure that the technology you develop through your other companies remain available at both the source and distribution level at no cost to Project Empyrean though contractual agreement before exit.
+</p>
+</div>
+</div>
+<div id="outline-container-orgce889df" class="outline-2">
+<h2 id="orgce889df"><span class="section-number-2">16.</span> Satisfaction Above a Standard</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Two types of satisfaction:
+</p>
+<ol class="org-ol">
+<li>Fulfilment of desire</li>
+<li>Absence of desire</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb5507b1" class="outline-2">
+<h2 id="orgb5507b1"><span class="section-number-2">17.</span> Timeline</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+Modeling the magnitude of thirst over the axis of time, we seek to control that thirst in various ways, in this order of preference:
+</p>
+<ol class="org-ol">
+<li>Complete cessation of thirst, forever.
+<ul class="org-ul">
+<li>Nirodha</li>
+</ul></li>
+<li>Maintainence of thirst under a threshold
+<ul class="org-ul">
+<li>Subsequent heavenly existences, maintained through diligent action.</li>
+</ul></li>
+<li>As above, but with short spikes underneath a secondary threshold
+<ul class="org-ul">
+<li>Human-deva cycle</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org55a5e03" class="outline-2">
+<h2 id="org55a5e03"><span class="section-number-2">18.</span> Epistemic Certainty</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+What is certainty of the maintainence of thirst below a threshold? It is a prediction of the future which will come true. And how do we know it will come true? By epistemic means.
+</p>
+
+<p>
+This is the study of epistemology.
+</p>
+</div>
+</div>
+<div id="outline-container-orgad06306" class="outline-2">
+<h2 id="orgad06306"><span class="section-number-2">19.</span> Aggregation of Testimony</h2>
+<div class="outline-text-2" id="text-19">
+<p>
+Gather and corroborate the claims of all beings available for communication. There are ascetics, contemplatives, and monks who possess supernormal capabilities of the mind.. we need to inquire from them.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbd4012e" class="outline-2">
+<h2 id="orgbd4012e"><span class="section-number-2">20.</span> Drugs</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+Can induce significantly altered states of mind, rich with opportunity for inquiry.
+</p>
+<ul class="org-ul">
+<li>N,N DMT</li>
+<li>5-MEO DMT</li>
+<li>Psilocybin</li>
+<li>LSD</li>
+<li>Mescaline</li>
+<li>etc.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org732846a" class="outline-2">
+<h2 id="org732846a"><span class="section-number-2">21.</span> Lucid Dreams</h2>
+</div>
+
+<div id="outline-container-orgaecea92" class="outline-2">
+<h2 id="orgaecea92"><span class="section-number-2">22.</span> Base Solution</h2>
+<div class="outline-text-2" id="text-22">
+<p>
+As above, so below. Let the general scheme be the same as it is here. Reduce the undesirable and amplify the desirable.
+</p>
+</div>
+<div id="outline-container-org708531b" class="outline-3">
+<h3 id="org708531b"><span class="section-number-3">22.1.</span> Body</h3>
+</div>
+</div>
+<div id="outline-container-orgf9e67ec" class="outline-2">
+<h2 id="orgf9e67ec"><span class="section-number-2">23.</span> Terms</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+<div id="outline-container-orgd78e8b1" class="outline-3">
+<h3 id="orgd78e8b1"><span class="section-number-3">23.1.</span> Stress</h3>
+<div class="outline-text-3" id="text-23-1">
+<p>
+Equivalent to the Theravada noun <i>dukkha</i>.
+</p>
+</div>
+</div>
+<div id="outline-container-org490c842" class="outline-3">
+<h3 id="org490c842"><span class="section-number-3">23.2.</span> Power</h3>
+<div class="outline-text-3" id="text-23-2">
+<p>
+Conditions that prevent stress from arising, or that attenuate it after it has already arisen by satisfying its cause.
+For example, the ability to satisfy a desire.
+</p>
+</div>
+</div>
+<div id="outline-container-org485346a" class="outline-3">
+<h3 id="org485346a"><span class="section-number-3">23.3.</span> Purity</h3>
+<div class="outline-text-3" id="text-23-3">
+<p>
+The absence of the cause of stress.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6261d5a" class="outline-2">
+<h2 id="org6261d5a"><span class="section-number-2">24.</span> Provisional Axiom of Stress and its Cause</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+The Theravada account of <i>dukkha</i> and its cause <i>taNhA</i> has been verified by me through experience. At the time of writing, I do not recall a single moment where stress was not conditioned by thirst. Thus, being the obvious answer, Exit 7 will procead along this axiom.
+</p>
+</div>
+</div>
+<div id="outline-container-org768a05d" class="outline-2">
+<h2 id="org768a05d"><span class="section-number-2">25.</span> A Similie</h2>
+<div class="outline-text-2" id="text-25">
+<p>
+Imagine a sphere floating in space, being moved around by a person&rsquo;s arm. He has semi-controllable spasms which drive him to move around the ball. The movement of the ball produces pleasurable feelings proportional to its speed, but the ball can also resist movement. Here, the force of the arm is thirst, movement and pleasure is its satiation, and the resistance of the ball causes sustained unresolved thirst which of course is stress. So the arm, being the impure mind, flails around and generates pleasure, and experiences stress when there is resistance.
+</p>
+</div>
+</div>
+<div id="outline-container-org0a649d8" class="outline-2">
+<h2 id="org0a649d8"><span class="section-number-2">26.</span> Taking Aim, Firing Shots</h2>
+<div class="outline-text-2" id="text-26">
+<p>
+To establish and maintain this freedom of the mind (arm-ball simile), one must hit the right targets (Act in accordance with the true reality of things). Blinded by the fog, we&rsquo;ve got to both clear it up so as to get a better view of the target, but also take our shots in the fog to the best of our ability to maximize our chances of hitting those targets. If we waste all our time clearing the fog, yet do not achieve it by the end of our lives, we gain nothing. If we spend all our lives taking poorly aimed shots we also gain nothing. Do both.
+</p>
+
+<p>
+But where to aim when there&rsquo;s so much fog? Take your best best, and that best bet now is the Dhamma. Study the doctrine Kamma, see Abhidhamma. Every major religious tradition claims favorable results from good deeds anyways, good change it really is true.
+</p>
+</div>
+</div>
+<div id="outline-container-org9de2860" class="outline-2">
+<h2 id="org9de2860"><span class="section-number-2">27.</span> Redundancy</h2>
+<div class="outline-text-2" id="text-27">
+<p>
+Purity is the primary objective, but power is a factor of redundancy. With an impure mind, one is vulnerable to stress, and power is there to protect the mind from it. Until cessation is attained, power will be a necessary redundant factor.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf808998" class="outline-2">
+<h2 id="orgf808998"><span class="section-number-2">28.</span> Rebirth</h2>
+<div class="outline-text-2" id="text-28">
+<p>
+Rebirth can be directed by developing the mind onto a particular destination. It seems that enlightenment itself can also be achieved in a similar way. (“MN 120: Saṅkhārūpapatti Sutta – Bhante Suddhāso” n.d.)(“MN 120: Saṅkhārūpapatti Sutta – Bhante Suddhāso” n.d.)
+</p>
+
+<p>
+The desire to be reborn as a deva is seen to be a breach in celibacy. (“Methunasutta—Bhikkhu Sujato” n.d.)
+</p>
+
+<p>
+From <i>The Buddhist Cosmos</i>: (Punnadhammo Mahathero, n.d.):
+</p>
+<ul class="org-ul">
+<li>Except for the Noble Ones, all beings will eventually become unrightous.</li>
+<li>Devas do not even know of the name of dissatisfaction for the vast majority of their lives.</li>
+<li>Upon birth, Devas of little merit are confused and afraid until they are told where they are. But Devas of great merit know exactly where they are and why they have arrived there.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e7356b" class="outline-2">
+<h2 id="org0e7356b"><span class="section-number-2">29.</span> Kamma</h2>
+<div class="outline-text-2" id="text-29">
+<p>
+Giving to those who are without passion, hatred, delusion, or desire is of great fruit. (“Taṇhāvagga—Bhikkhu Ānandajoti” n.d.)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb527146" class="outline-2">
+<h2 id="orgb527146"><span class="section-number-2">30.</span> Death</h2>
+<div class="outline-text-2" id="text-30">
+<p>
+Research the mechanics of death for pure and powerful rebirths.
+</p>
+</div>
+</div>
+<div id="outline-container-org5461a75" class="outline-2">
+<h2 id="org5461a75"><span class="section-number-2">31.</span> Desire</h2>
+<div class="outline-text-2" id="text-31">
+<p>
+What is the cause of desire and its particular instances? What are the internal causes? What are the external causes? Can it be permanantly stilled?
+</p>
+
+<p>
+Contemplating the attractive, crushed by thoughts and pierced by passion, increases the bond of craving. (“Taṇhāvagga—Bhikkhu Ānandajoti” n.d.)
+</p>
+</div>
+</div>
+<div id="outline-container-orgaf97fed" class="outline-2">
+<h2 id="orgaf97fed"><span class="section-number-2">32.</span> Epistemology</h2>
+<div class="outline-text-2" id="text-32">
+<p>
+Can these mechanics truly be known? Will their application always remain valid, an ever flawless prediction?
+</p>
+</div>
+</div>
+<div id="outline-container-org3108805" class="outline-2">
+<h2 id="org3108805"><span class="section-number-2">33.</span> Mind</h2>
+<div class="outline-text-2" id="text-33">
+<p>
+The mind seems to be chief in determining the contents of dreams. Sleep could be seen as similar to death, with subsequent rebirth in the dream. Without phyical support, the mind generates its own forms, seemingly in response to its desires. So then, do the contents and tendencies of the mind also affect the process of rebirth? The wise certainly say so.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf82c4c2" class="outline-2">
+<h2 id="orgf82c4c2"><span class="section-number-2">34.</span> Power of Knowledge</h2>
+<div class="outline-text-2" id="text-34">
+<p>
+Ability to perceive and comprehend the mechanics of stress.
+</p>
+</div>
+</div>
+<div id="outline-container-org9a01aef" class="outline-2">
+<h2 id="org9a01aef"><span class="section-number-2">35.</span> Universal Intention</h2>
+<div class="outline-text-2" id="text-35">
+<p>
+With each action, intend: &ldquo;May all beings be free of stress.&rdquo;
+</p>
+</div>
+</div>
+<div id="outline-container-org5baecbd" class="outline-2">
+<h2 id="org5baecbd"><span class="section-number-2">36.</span> The Ideal Desires</h2>
+<div class="outline-text-2" id="text-36">
+<p>
+If there must be desire, let it be for the aquisition of power, purity, and knowledge thereof, so that ones existence may perpetually tend towards a superior ideal, and eventually perhaps liberation itself.
+</p>
+</div>
+</div>
+<div id="outline-container-org887d9b2" class="outline-2">
+<h2 id="org887d9b2"><span class="section-number-2">37.</span> Examples</h2>
+<div class="outline-text-2" id="text-37">
+</div>
+<div id="outline-container-orgd845424" class="outline-3">
+<h3 id="orgd845424"><span class="section-number-3">37.1.</span> Progressive house fps</h3>
+<div class="outline-text-3" id="text-37-1">
+<p>
+Playing deadshot.io while listening to &ldquo;Make House Music Great Again&rdquo;. Sufficient satisfaction while you are performing well, with dips into dissatisfaction when performing poorly.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb6b7840" class="outline-2">
+<h2 id="orgb6b7840"><span class="section-number-2">38.</span> Skepticism</h2>
+<div class="outline-text-2" id="text-38">
+<p>
+Time and time again have I fallen pray to faith. You drop your guard until its flaws inevitability become evident.
+Do not let those words on the screen deceive you, for there is no guarantee of their validity.
+Do not let those pre-conditioned notions of family, identity, and society invade the axiomatic foundation of your knowledge.
+Seek yourself, drop the dogma, remain pure of mind. Stop only after the goal has been attained, trust only in that attainment. All else is merely pragmatic.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcdedd2f" class="outline-2">
+<h2 id="orgcdedd2f"><span class="section-number-2">39.</span> The brahma viArA</h2>
+<div class="outline-text-2" id="text-39">
+<p>
+By experience I testify the efficacy of these sublime abodes, namely mettA, karuNA, and muditA. Remain in them always.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfb48540" class="outline-2">
+<h2 id="orgfb48540"><span class="section-number-2">40.</span> Supernormal Powers</h2>
+<div class="outline-text-2" id="text-40">
+<p>
+siddhis, gained through mastery of jhAna.
+</p>
+
+<blockquote>
+<p>
+You don&rsquo;t even need to study monks though. Siddhis are accessible through many different systems, although not always the same siddhis. These masters aren&rsquo;t into displaying parlor tricks to people (probably a similar reason I get annoyed when people find out I do parkour and say shit like, &ldquo;Do a backflip!&rdquo;), but if you befriend the right people and develop the right relationships in your journey, there&rsquo;s really no question you&rsquo;ll come across people who display profound spiritual abilities. If you live in a world where no one trains this stuff, no one talks about it, no one practices it, then of course the world as it appears will seem like the only world that exists.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org2edff69" class="outline-2">
+<h2 id="org2edff69"><span class="section-number-2">41.</span> Axiomatic Pragmatism</h2>
+<div class="outline-text-2" id="text-41">
+<p>
+What is truth anyways? Truth is just an arbitrary concept. What we consider truth is merely a prediction, so apparently reliable that it becomes falsely elevated to an absolute value.
+</p>
+
+<p>
+Forget about finding &ldquo;truth&rdquo;, its meaningless. Instead, let&rsquo;s use &ldquo;truth&rdquo; as a means to the end, not as an end in itself.
+</p>
+
+<p>
+Let us establish those axioms whos confidence has been reified time and time again, according to memory. Let us ensure they persist beyong death, so that we may profit off of this knowledge as a means to resolution.
+</p>
+</div>
+</div>
+<div id="outline-container-org89abf43" class="outline-2">
+<h2 id="org89abf43"><span class="section-number-2">42.</span> Predictions</h2>
+<div class="outline-text-2" id="text-42">
+<p>
+All knowledge indirectly perceived is merely a prediction. Primarily, those which derive some value based on memory, which is then projected into the future as an expected result. Its practical, it works, but let us not make the mistake of elevating this &ldquo;knowledge&rdquo; to an absolute status, for those values are not directly perceived; see Plato&rsquo;s Cave.
+</p>
+</div>
+</div>
+<div id="outline-container-org0dec9d2" class="outline-2">
+<h2 id="org0dec9d2"><span class="section-number-2">43.</span> Resolution and Identity</h2>
+<div class="outline-text-2" id="text-43">
+<p>
+If there is no identity, then who is there to be resolved? It seems that the relinquishment of the self is a means of complete resolution, by way of the requirement thereof no longer having any validity. A meta-solution by removing the problem itself.
+</p>
+</div>
+</div>
+<div id="outline-container-org73cb0dd" class="outline-2">
+<h2 id="org73cb0dd"><span class="section-number-2">44.</span> Abundance</h2>
+<div class="outline-text-2" id="text-44">
+<p>
+Be in abundance of those conditions which allow for various kinds of resolution. Hold onto them carefully until the ultimate goal is achived. A sort of existential insurance for the journey ahead.
+</p>
+</div>
+</div>
+<div id="outline-container-org584a51f" class="outline-2">
+<h2 id="org584a51f"><span class="section-number-2">45.</span> Handling Desire</h2>
+<div class="outline-text-2" id="text-45">
+<p>
+Use a combination of these techniques, listed preferentially:
+</p>
+<ol class="org-ol">
+<li>Equanimity</li>
+<li>Ignorance</li>
+<li>Gratification</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb0d661d" class="outline-2">
+<h2 id="orgb0d661d"><span class="section-number-2">46.</span> Optimizing Desire</h2>
+<div class="outline-text-2" id="text-46">
+<p>
+Modify and discard the expensive and impure. Simplify, make them efficient. The more streamlined the defilements, the more reliable the resolution.
+</p>
+</div>
+</div>
+<div id="outline-container-orga9e6144" class="outline-2">
+<h2 id="orga9e6144"><span class="section-number-2">47.</span> Attenuate the Identity</h2>
+<div class="outline-text-2" id="text-47">
+<p>
+The weaker the identity, the lesser the defilement. The desires become streamlined, and a greater resolution is at hand, born of increase posibilities (due to removing incompatibilties with the identity now attenuated).
+</p>
+</div>
+</div>
+<div id="outline-container-org01dc15e" class="outline-2">
+<h2 id="org01dc15e"><span class="section-number-2">48.</span> Aggregation of Testimony</h2>
+<div class="outline-text-2" id="text-48">
+<p>
+There are over 8 billion humans on this Earth, and thus presumably that many active conscious experiences which can be testified. Let us gain a living testimony 8 billion times greater than my own, a great survey that has never been done before.
+</p>
+
+<p>
+There are also historical testimonies of those who have passed, great wisdom lost to time. Let us discover exhaustively this wisdom which can lead to our liberation.
+</p>
+</div>
+</div>
+<div id="outline-container-org68024bf" class="outline-2">
+<h2 id="org68024bf"><span class="section-number-2">49.</span> Lucid Dreams</h2>
+<div class="outline-text-2" id="text-49">
+<p>
+The greatest opening of which I regularly experience. I should take advantage of it by taking full advantage of this sole great opening, while the others are still being developed.
+</p>
+</div>
+</div>
+<div id="outline-container-org7fcc271" class="outline-2">
+<h2 id="org7fcc271"><span class="section-number-2">50.</span> Personal Instruction</h2>
+<div class="outline-text-2" id="text-50">
+<p>
+Have your mind read by one farther down this path, and receive instructions from him.
+</p>
+</div>
+</div>
+<div id="outline-container-orgccefcfd" class="outline-2">
+<h2 id="orgccefcfd"><span class="section-number-2">51.</span> Brahmā and DMT Entities</h2>
+<div class="outline-text-2" id="text-51">
+<p>
+In DN 81.2, the Great Brahmā does not answer the mendicant&rsquo;s question, instead choosing to boast about his status as God. This is intruiging, as I have heard that users of DMT who ask questions to the entities simply scoff and boast, dismissing the question, similar to Brahmā in the passage. A simmilar thing is said to occur in DN 2.
+</p>
+
+<p>
+Note that Brahmā does subsequently admit his ignorance, just not in public to save face.
+</p>
+</div>
+</div>
+<div id="outline-container-org26e18a8" class="outline-2">
+<h2 id="org26e18a8"><span class="section-number-2">52.</span> Possible Fourth jhAna in a Dream</h2>
+<div class="outline-text-2" id="text-52">
+<p>
+Bikkhu Sujato said:
+</p>
+<blockquote>
+<p>
+“Invisible” (anidassanaṁ) here is a synonym for “formless” (see eg. MN 21:14.8, “space is formless and invisible”, ākāso arūpī anidassano). Normally the colors and images seen in the “form” absorptions are described as “visible” (eg. DN 16:3.29.1), so this indicates the formless attainments. | Pabhaṁ means “luminous”, as with the deities that are “self-luminous” (sayaṁpabhā, DN 27:10.3). Sabbato pabhaṁ (“luminous all-round”) is synonymous with pariyodāta (“bright”, literally “white all over”), a stock descriptor of the mind of fourth jhāna, on which the formless states are based.
+</p>
+</blockquote>
+
+<p>
+In that dream I was sitting on a couch yet immersed in bluish white light, seemingly endless, and totally equanimous, such that communication attempts from another being in the dream were initially not responded to until further attempts eventually pulled me out of that state. Might this have been an experience of fourth jhAna?
+</p>
+</div>
+</div>
+<div id="outline-container-org553cde3" class="outline-2">
+<h2 id="org553cde3"><span class="section-number-2">53.</span> Theory of Desire</h2>
+<div class="outline-text-2" id="text-53">
+<p>
+What is the source of desire? When there is an apparent desire, consciousness of its corresponding object brings about its gratification. When the desire is not apparent, still, consciousness of the same object can still bring about gratification, as if the desire was latent and only made active upon contact with its object.
+</p>
+
+<p>
+As desire is being continually gratified, there is a great resolution and attenuation of desires that would otherwise be present. How does this all work? By understanding the machanics of desire, an ideal being and world can be constructed such that there is a continual gratification of a high degree.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd966012" class="outline-2">
+<h2 id="orgd966012"><span class="section-number-2">54.</span> Slices of the Ultimate</h2>
+<div class="outline-text-2" id="text-54">
+<p>
+That the ultimate must be omnipotent, yet it incarnates with a subset of its power as human beings. Using that subset of power, a limited experience is granted. The gods in heaven have a much larger slice of that power, and wield it accordingly.
+</p>
+
+<p>
+The scene is set by the omnipotent, but is experienced in a limited maner. Some control is given to the volition, limited, and the rest is already set, outside of the volitional control.
+</p>
+
+<p>
+So enjoyment, perhaps, is experiencing higher levels closer to the ultimate from a limited perspective. Limitation and separation is pain, like stress built up in the body. Releasing that limitation is enjoyment, like stretching to relieve the stress.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd5281e" class="outline-2">
+<h2 id="orgdd5281e"><span class="section-number-2">55.</span> A New Body in a New World</h2>
+<div class="outline-text-2" id="text-55">
+<p>
+This body is inadequate, as is this world. A new bady with a vastly increased capacity for pleasure, decreased capacity for pain, in a world suitible for its gratification; this is necessary.
+</p>
+
+<p>
+Create the new body, the new world.
+</p>
+</div>
+</div>
+<div id="outline-container-org6437c44" class="outline-2">
+<h2 id="org6437c44"><span class="section-number-2">56.</span> The Baffling Nature of Lucid Dreams</h2>
+<div class="outline-text-2" id="text-56">
+<p>
+They are nearely as realistic as waking reality, yet somehow feel even realer subjectively. There&rsquo;s no way this is an emergent phenomenon of the brain, something insane is going on behind the scenes.
+</p>
+
+<p>
+Or not&#x2026; just look at what generative AI is capable of doing. Even so, its insane nonetheless and certainly not the product of blind chaos. There has to be some sort of element of feedback.
+</p>
+</div>
+</div>
+<div id="outline-container-orgca782d2" class="outline-2">
+<h2 id="orgca782d2"><span class="section-number-2">57.</span> Samadhi vs Enjoyment (and Desire)</h2>
+<div class="outline-text-2" id="text-57">
+<p>
+The former is clearly superior. Far more stable, and reliable in that it only depends on the mind and body, where as the latter still needs the objects to satisfy.
+</p>
+
+<p>
+When coming out of Samadhi, those objects which were previously desirable no longer have nearly the same effect. Secumbing once again to lower forms of desire is wholly unintersting. It is only when a deliberate effort is made to bring back the defilements, or allowing them to creep back slowly, that the functioning of sensual desire and enjoyment can resume.
+</p>
+
+<p>
+Issues:
+</p>
+<ul class="org-ul">
+<li>Certainty of future Samadhi, and what will be left for you when it doesnt exist, and you are left to deal with your defilements.</li>
+<li>It takes effort to attain and remain in Samadhi. Of course, this is sure to be solved in due time through mastery.</li>
+<li>Having to deal with the world and take care of the body are obstacles to remaining in Samadhi. Plus the return can be jarring, such that it seems a highly sensuous life is more suitable for being in the world yet attaining a comparable level of resolution (perhaps there&rsquo;s no comparision, I have yet to discover the higher levels.)</li>
+</ul>
+
+<p>
+The fact is however, that a life optimized for Samadhi would be the best possible life I could think of. Drop everything, live like a monk, fully conditioned with the bare necessities for remaining in Samadhi. The only problem is, what comes after death? What if I grow ill? There is a problem of certainty which plunges me back into the world, searching for answers.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb7a3559" class="outline-2">
+<h2 id="orgb7a3559"><span class="section-number-2">58.</span> Two Approaches</h2>
+<div class="outline-text-2" id="text-58">
+<ol class="org-ol">
+<li>To satisfy the desire</li>
+<li>To abandon the desire</li>
+</ol>
+
+<p>
+The total fulfilment of either approaches qualifies as the ultimate attainment.
+</p>
+</div>
+</div>
+<div id="outline-container-orge3fa7e7" class="outline-2">
+<h2 id="orge3fa7e7"><span class="section-number-2">59.</span> Karma as a Queue/Buffer</h2>
+<div class="outline-text-2" id="text-59">
+<p>
+That choices/volition create karma, which is then added to the buffer. When the buffer is flushed depends on when the system is ready for it to take fruit. Nonetheless, all karma will eventually be cleared.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b147f4" class="outline-2">
+<h2 id="org5b147f4"><span class="section-number-2">60.</span> Steps</h2>
+<div class="outline-text-2" id="text-60">
+<p>
+Verify:
+</p>
+<ol class="org-ol">
+<li><del>Rebirth</del></li>
+<li>The better life</li>
+<li>Karma</li>
+</ol>
+
+<p>
+If there&rsquo;s rebirth, then determine the extent of the better life. If the better life extends up to the Heavens, then determine its cause. If its Karma, then determine what Karma leads to it. And when that&rsquo;s determined, the path is set.
+</p>
+
+<p>
+Whether there is or isn&rsquo;t rebirth is irrelevant. If the latter, then nothing we do matters, as it all leads to the same destination anyways. Therefore, we act out of caution, assuming the existence of rebirth, for the future is not knowable through indirect means.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa63af4" class="outline-2">
+<h2 id="orgfa63af4"><span class="section-number-2">61.</span> The Better Life</h2>
+<div class="outline-text-2" id="text-61">
+</div>
+<div id="outline-container-orga17b61b" class="outline-3">
+<h3 id="orga17b61b"><span class="section-number-3">61.1.</span> The Certain Life of Humans</h3>
+<div class="outline-text-3" id="text-61-1">
+<p>
+There are humans who live in abundance, joy, and bliss as a result of the conditions available to them. This can be thorougly verified. Thus, there is certainly the better life to that extent.
+</p>
+
+<ul class="org-ul">
+<li>Jhana</li>
+<li>Wealth</li>
+</ul>
+
+<ul class="org-ul">
+<li>Women</li>
+</ul>
+
+<ul class="org-ul">
+<li>Cars</li>
+<li>Luxury</li>
+<li>Abundance</li>
+<li>Fame</li>
+<li>Opportunity</li>
+<li>Knowledge</li>
+<li>Wisdom</li>
+<li>Clarity</li>
+<li>Certainty</li>
+<li>Etc.</li>
+</ul>
+
+<p>
+It&rsquo;s all there, and can be verified. Thus, if it is caused, it can be arrived at once again.
+</p>
+</div>
+</div>
+<div id="outline-container-org6d4bb5a" class="outline-3">
+<h3 id="org6d4bb5a"><span class="section-number-3">61.2.</span> Sleep and Dreams</h3>
+<div class="outline-text-3" id="text-61-2">
+<p>
+Lucid dreams, a realm of far greater potential. This can be developed to a supreme extent, and is available to you each and every night, along with the rest of sleep.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdda9ba8" class="outline-3">
+<h3 id="orgdda9ba8"><span class="section-number-3">61.3.</span> Aliens</h3>
+<div class="outline-text-3" id="text-61-3">
+<p>
+See the Ariel School Incident, the Rendlesham Forst Incident, among many others. Its pretty clear that Aliens and Alien UFOs exist. But is this really the better life? In some ways yes, especially techonologically. However, they don&rsquo;t seem to be as colorful or lively as humans.. at least that&rsquo;s the pop culture impression.
+</p>
+</div>
+</div>
+<div id="outline-container-org0fa706d" class="outline-3">
+<h3 id="org0fa706d"><span class="section-number-3">61.4.</span> God and the Devas</h3>
+<div class="outline-text-3" id="text-61-4">
+<p>
+Experience pleasure beyond human comparison.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6003214" class="outline-2">
+<h2 id="org6003214"><span class="section-number-2">62.</span> Devas could extend their lives</h2>
+<div class="outline-text-2" id="text-62">
+<p>
+Through generation of good Karma in that life itself, DN 21:2.8.3
+</p>
+</div>
+</div>
+<div id="outline-container-org06d0163" class="outline-2">
+<h2 id="org06d0163"><span class="section-number-2">63.</span> The way</h2>
+</div>
+<div id="outline-container-orgddd5a09" class="outline-2">
+<h2 id="orgddd5a09"><span class="section-number-2">64.</span> Type of relief</h2>
+<div class="outline-text-2" id="text-64">
+<p>
+Certain and sustainable relief, pursuit of its permanance and completion.
+</p>
+
+<p>
+Four kinds of relief:
+</p>
+<ol class="org-ol">
+<li>Eternal &amp; complete (mOkSa, nirvANa, etc.)</li>
+<li>Eternal &amp; incomplete (Abrahamic heaven?)</li>
+<li>Temporary &amp; complete (temporary nirvANa?)</li>
+<li>Temporary &amp; incomplete (varied, from mundane pleasures to at least the lower jhAnas)</li>
+</ol>
+
+<p>
+For the temporary and incomplete, sustainability and maximization is sought.
+</p>
+</div>
+</div>
+<div id="outline-container-org16474c4" class="outline-2">
+<h2 id="org16474c4"><span class="section-number-2">65.</span> Stress</h2>
+<div class="outline-text-2" id="text-65">
+<p>
+Stress is a term that points to the root problem of existence, the sole motivation behind even volition itself.
+</p>
+</div>
+<div id="outline-container-org689efa7" class="outline-3">
+<h3 id="org689efa7"><span class="section-number-3">65.1.</span> Stress Over Time</h3>
+<div class="outline-text-3" id="text-65-1">
+<p>
+\( f(x)=T \)  where:
+\(T >= 0\)
+\( T=stress \)
+\( x=time \)
+</p>
+
+<p>
+\(U >= 10\) where:
+<i>U = unfathomable suffering</i>
+</p>
+
+<p>
+\( 7 < A < 10\) where:
+A = abject suffering
+</p>
+
+<p>
+\(F = 0\) where
+F = Complete relief
+</p>
+
+<p>
+\( f(x) = 0 = R \) where:
+R = Release
+</p>
+
+<p>
+\(S < 3\) where:
+S = Satisfactory stress (happiness)
+</p>
+
+<p>
+\( T = C-F \) where
+C = craving
+F = fulfillment of craving, consciousness of the desired object.
+</p>
+
+<p>
+<b>Stress is the difference between craving and fulfillment.</b>
+</p>
+
+<p>
+Accompanied with it is feeling. The same amount of stress is attainable with any amount of accompanied feeling. For example, relaxation and ecstasy can have the same amount of stress, yet with vastly different feelings.
+</p>
+</div>
+</div>
+<div id="outline-container-orgafae78d" class="outline-3">
+<h3 id="orgafae78d"><span class="section-number-3">65.2.</span> Preferences</h3>
+<div class="outline-text-3" id="text-65-2">
+<p>
+Each individual comprises of two sets containing objects which he likes and dislikes respectively.
+They can delight in those objects which they share in common, but there can be conflict when another possesses objects that he does not enjoy. The problem is amplified when one side possesses more of these than the other.
+</p>
+</div>
+</div>
+<div id="outline-container-org90b29e5" class="outline-3">
+<h3 id="org90b29e5"><span class="section-number-3">65.3.</span> Rename</h3>
+<div class="outline-text-3" id="text-65-3">
+<p>
+Grow and accumulate the potential for alieviating stress at any moment, like a vessel of water with the ability to quench your thirst whenever you wish, while striving for unconditional release.
+</p>
+
+<p>
+Force (craving, grasping, pushing, clinging, desire, aversion, etc.) appears to be the the exclusive condition for stress. Without force, it appears, there is no stress.
+</p>
+
+<p>
+The the dysfunctional mind clings, pushes, and pulls, causing stress. The mind should be purified so as to never apply force ever again.
+</p>
+
+<p>
+And as the mind is purified, grow and maintain the conditions for its satisfaction, both in case liberation is never acheied, and also to ensure the integrity of the system. Bad experiences are not only stressful do to the dysfunction, but likey exacerbate the dysfunction to begin with, throwing us off course.
+</p>
+
+<p>
+<b>Maximize power and purity</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org5c96018" class="outline-3">
+<h3 id="org5c96018"><span class="section-number-3">65.4.</span> The Shell</h3>
+<div class="outline-text-3" id="text-65-4">
+<p>
+Contextual and responsive to the current conditions. Can be destroyed and recreated as needed while preserving the seed.
+</p>
+</div>
+</div>
+<div id="outline-container-orga669cce" class="outline-3">
+<h3 id="orga669cce"><span class="section-number-3">65.5.</span> Gradients</h3>
+<div class="outline-text-3" id="text-65-5">
+<p>
+The shell should transition seemelessly between incarnations, ensuring the seed is preserved throughout. (Research of the mechanics of rebirth.)
+</p>
+</div>
+</div>
+<div id="outline-container-org0b3559f" class="outline-3">
+<h3 id="org0b3559f"><span class="section-number-3">65.6.</span> Internal and External Factors</h3>
+<div class="outline-text-3" id="text-65-6">
+<p>
+Craving and clinging cause stress. Minimize craving and clinging.
+</p>
+
+<p>
+Satisfaction thereof attenuates stress, Maximize satisfaction.
+</p>
+</div>
+</div>
+<div id="outline-container-org7c179fe" class="outline-3">
+<h3 id="org7c179fe"><span class="section-number-3">65.7.</span> Next Gen R&amp;D</h3>
+<div class="outline-text-3" id="text-65-7">
+<p>
+Develop it simultaneously with the current incarnation, so that it is ready to manfifest at the death of the current.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8014bb" class="outline-3">
+<h3 id="orgf8014bb"><span class="section-number-3">65.8.</span> The Essential Qualities</h3>
+<div class="outline-text-3" id="text-65-8">
+<p>
+The auxilliary aims which at must inevitably characterize each existence until the goal is attained: knowledge, power, and attainment.
+</p>
+</div>
+</div>
+<div id="outline-container-org0fbbc6b" class="outline-3">
+<h3 id="org0fbbc6b"><span class="section-number-3">65.9.</span> Indulgence Ration</h3>
+<div class="outline-text-3" id="text-65-9">
+<p>
+The great forces of desire lead one astry and into destruction. Until the goal is reached, there is a limit to the capacity for resistence. Appease the forces as needed with heedful restraint. Keep things at bay without going overboard.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6eda8dd" class="outline-2">
+<h2 id="org6eda8dd"><span class="section-number-2">66.</span> The Fundamental Problem of Subjective Existence</h2>
+<div class="outline-text-2" id="text-66">
+</div>
+<div id="outline-container-orgb347a24" class="outline-3">
+<h3 id="orgb347a24"><span class="section-number-3">66.1.</span> What is a problem?</h3>
+<div class="outline-text-3" id="text-66-1">
+<p>
+The Collins English Dictionary defines a problem as the following (“PROBLEM Definition and Meaning | Collins English Dictionary” 2024):
+</p>
+<blockquote>
+<p>
+A problem is a situation that is unsatisfactory and causes difficulties for people.
+</p>
+</blockquote>
+
+<p>
+Things which are typically considered problematic:
+</p>
+<ul class="org-ul">
+<li>Bodiliy and mental pain</li>
+<li>Losing what is desired</li>
+<li>Failing to obtain that which is desired</li>
+<li>Boredom</li>
+<li>Loss of a loved one</li>
+<li>Hunger</li>
+<li>Thirst</li>
+<li>Irritation</li>
+<li>Itchiness</li>
+<li>Stress</li>
+<li>Displeasure</li>
+<li>Ugliness</li>
+<li>Discomfort</li>
+<li>Offense</li>
+<li>Criticism</li>
+<li>Instability</li>
+<li>Birth</li>
+<li>Aging</li>
+<li>Illness</li>
+<li>Death</li>
+<li>Misfortune</li>
+</ul>
+
+<blockquote>
+<p>
+Now this, bhikkhus, is the noble truth of suffering: birth is suffering, aging is suffering, illness is suffering, death is suffering; union with what is displeasing is suffering; separation from what is pleasing is suffering; not to get what one wants is suffering; in brief, the five aggregates subject to clinging are suffering.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org6aeaf77" class="outline-3">
+<h3 id="org6aeaf77"><span class="section-number-3">66.2.</span> Examples of confident happiness</h3>
+<div class="outline-text-3" id="text-66-2">
+<ul class="org-ul">
+<li>The onset of summer break, knowing that the burden of school is over long enough to completely forget about it.</li>
+<li>Second jhana.</li>
+<li>Upholding virtue, knowing that one is blameless.</li>
+<li>Establishing security in some wordly context.</li>
+<li>Waking up after a good night&rsquo;s sleep after having established a healthy and regular sleep schedule.</li>
+<li>Paying off one&rsquo;s debts, knowing that he is free from that burden for good.</li>
+<li>Endless FRC build and comp season, refined and amplified.</li>
+<li>Comedown from a bad shroom trip.</li>
+<li>Endless party</li>
+<li>Endless movie</li>
+<li>Endless anime</li>
+<li>Endless co-op multiplayer video game</li>
+</ul>
+
+<p>
+In the same way, the solution involves secure and confident happiness, freedom from affliction, in both limited and unlimited ways according to the level of attainment.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb6d1327" class="outline-3">
+<h3 id="orgb6d1327"><span class="section-number-3">66.3.</span> Is it possible?</h3>
+<div class="outline-text-3" id="text-66-3">
+<ul class="org-ul">
+<li>Lucid dreams and VR are possible.. so why not.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde20390" class="outline-3">
+<h3 id="orgde20390"><span class="section-number-3">66.4.</span> Causality</h3>
+<div class="outline-text-3" id="text-66-4">
+<p>
+Is there an internal, fully controllable cause of craving? Is qualia fully caused by the induvidual? Or are external circumstances also at play?
+</p>
+</div>
+</div>
+<div id="outline-container-org82c47f7" class="outline-3">
+<h3 id="org82c47f7"><span class="section-number-3">66.5.</span> Subjectivity</h3>
+<div class="outline-text-3" id="text-66-5">
+<p>
+All problems are subjective. There is not a single phenomenon which is inherently problematic. Here are some qualia that some may consider problematic, while others may not:
+</p>
+
+<ul class="org-ul">
+<li>The taste of certain foods, like meat, fish, coffee, durian, etc.</li>
+<li><b>Bitterness in Food</b>: Some find bitterness, like that in coffee or dark chocolate, unpleasant, while others enjoy it for its complexity.</li>
+<li><b>ASMR Sounds</b>: Soft whispering or tapping can relax some people, but can also annoy or even disturb others who experience “misophonia.”</li>
+<li><b>Bright or Neon Colors</b>: Bright, bold colors can seem joyful and invigorating to some, but harsh or overstimulating to others.</li>
+<li><b>Heat and Humidity</b>: Warm, humid environments feel comforting to some, while others find them stifling and uncomfortable.</li>
+<li><b>Silence or Stillness</b>: Silence may evoke peace for some, while for others, it leads to discomfort or even anxiety.</li>
+<li><b>Strong Scents</b>: Strong fragrances like perfumes, flowers, or certain foods (like durian or garlic) can delight some but repel others due to their intensity.</li>
+<li><b>Intense or Dissonant Music</b>: Some forms of music with complex or dissonant harmonies can be deeply moving for some listeners but jarring or unsettling for others.</li>
+</ul>
+
+<p>
+In brief, the problematic aspect of qualia is distinct from the qualia itself.
+</p>
+</div>
+</div>
+<div id="outline-container-org825c302" class="outline-3">
+<h3 id="org825c302"><span class="section-number-3">66.6.</span> Origin</h3>
+<div class="outline-text-3" id="text-66-6">
+<p>
+Given that all problems are subjective in nature, we idintify its origin within consciousness itself, in the form of thirst, or craving.
+</p>
+
+<p>
+When a person is thirsty, there is a persistent push towards hydration, and as a result that person acts in accordance until that thirst is finally quenched. Likewise in the scenario where a person craves a certain food.
+</p>
+
+<p>
+This craving is the source of both desire and aversion, both being manifestations thereof.
+</p>
+
+<p>
+It is fundamental, as without this craving there cannot be any objection.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb92129c" class="outline-3">
+<h3 id="orgb92129c"><span class="section-number-3">66.7.</span> Two principle manifestations</h3>
+<div class="outline-text-3" id="text-66-7">
+<ol class="org-ol">
+<li>Attraction</li>
+<li>Aversion</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge749f25" class="outline-3">
+<h3 id="orge749f25"><span class="section-number-3">66.8.</span> Two dimensions</h3>
+<div class="outline-text-3" id="text-66-8">
+<ol class="org-ol">
+<li>Intensity</li>
+<li>Duration</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbd637d0" class="outline-3">
+<h3 id="orgbd637d0"><span class="section-number-3">66.9.</span> Mechanics</h3>
+<div class="outline-text-3" id="text-66-9">
+<p>
+Craving seems to arise either spontaneously, or in reaction to qualia.
+</p>
+
+<p>
+It seems to subside either on its own, or in reaction to qualia.
+</p>
+</div>
+</div>
+<div id="outline-container-org829c100" class="outline-3">
+<h3 id="org829c100"><span class="section-number-3">66.10.</span> Two solutions: reduction and satisfaction</h3>
+<div class="outline-text-3" id="text-66-10">
+<ol class="org-ol">
+<li>Reducing craving at the source</li>
+<li>Satisfaction of the craving</li>
+</ol>
+
+<p>
+Both subject to partiality and eternality.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf68a64d" class="outline-3">
+<h3 id="orgf68a64d"><span class="section-number-3">66.11.</span> Concerns</h3>
+<div class="outline-text-3" id="text-66-11">
+<ul class="org-ul">
+<li>Will there ever be a time when these observed mechanics are invalid?</li>
+<li>Are these mecahnics universal to all conscious instances?</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd84bc4d" class="outline-3">
+<h3 id="orgd84bc4d"><span class="section-number-3">66.12.</span> Other papers</h3>
+<div class="outline-text-3" id="text-66-12">
+<ul class="org-ul">
+<li>Existing proposed solutions</li>
+<li>The afterlife</li>
+<li>Epistemic verification</li>
+<li>Research of novel solutions</li>
+<li>Plan of action for arrival at epistemic certainty</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shashank Rajesh</p>
+<p class="date">Created: 2024-12-28 Sat 15:42</p>
+</div>
+</body>
+</html>
