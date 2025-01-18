@@ -27,14 +27,14 @@ export default function Home() {
       if (!res.ok) throw new Error(data.message || 'Subscription failed')
       
       toast.success('Sign up success. Stay tuned for updates.', {
-        duration: 1500,
+        duration: 2000,
         dismissible: false
       })
       form.reset()
     } catch (error) {
       console.error('Submission error:', error)
       toast.error(error instanceof Error ? error.message : 'Failed to subscribe. Please try again.', {
-        duration: 1500,
+        duration: 2000,
         dismissible: false
       })
     }

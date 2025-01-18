@@ -36,15 +36,15 @@ input {
 
 .animate-fade-in {
   opacity: 0;
-  animation: fade-slide-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fade-slide-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 200ms forwards;
 }
 
 .delay-500 {
-  animation-delay: 500ms;
+  animation-delay: 700ms;
 }
 
 .delay-700 {
-  animation-delay: 700ms;
+  animation-delay: 900ms;
 }
 
 [data-sonner-toaster] {
