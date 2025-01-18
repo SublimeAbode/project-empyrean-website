@@ -26,11 +26,17 @@ export default function Home() {
 
       if (!res.ok) throw new Error(data.message || 'Subscription failed')
       
-      toast.success('Sign up success. Stay tuned for updates.')
+      toast.success('Sign up success. Stay tuned for updates.', {
+        duration: 1500,
+        dismissible: false
+      })
       form.reset()
     } catch (error) {
       console.error('Submission error:', error)
-      toast.error(error instanceof Error ? error.message : 'Failed to subscribe. Please try again.')
+      toast.error(error instanceof Error ? error.message : 'Failed to subscribe. Please try again.', {
+        duration: 1500,
+        dismissible: false
+      })
     }
   }
 
@@ -38,10 +44,7 @@ export default function Home() {
     <>
       {/* Fixed overlay for notifications */}
       <div className="fixed top-5 left-0 right-0 z-50 pointer-events-none">
-        <Toaster 
-          position="top-center"
-          closeButton
-        />
+        <Toaster position="top-center" />
       </div>
 
       <div className="animate-fade-in">
