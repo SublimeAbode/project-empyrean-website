@@ -1,15 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  // This ensures CSS is extracted into static files
   output: 'export',
-  // Since we're doing static export, we need to disable image optimization
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
-  // Add this to ensure proper asset handling
-  assetPrefix: '',
-  basePath: ''
+  // Remove these if they're causing issues
+  // assetPrefix: '',
+  // basePath: ''
 }
 
 module.exports = nextConfig 
