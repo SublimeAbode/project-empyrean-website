@@ -7,7 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: '#40E0D0',
+        'page-bg': '#F6FFFF',
+        'border': {
+          DEFAULT: '#94A3B8',  // Darker than before (was gray-300)
+          hover: '#0F172A',    // Almost black (was gray-800)
+        },
+        'text': {
+          DEFAULT: '#0F172A',  // Almost black (was gray-800)
+          dark: '#020617',     // Pure black (was gray-900)
+        }
       },
     },
   },
