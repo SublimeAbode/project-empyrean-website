@@ -7,8 +7,11 @@ export default function Home() {
   // Client-side form submission handler
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    console.log('Form submission started')
+    
     const form = e.currentTarget
     const email = new FormData(form).get('email')
+    console.log('Email to submit:', email)
 
     try {
       const res = await fetch('/api/subscribe', {
@@ -16,13 +19,18 @@ export default function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       })
+      console.log('Response status:', res.status)
+      
+      const data = await res.json()
+      console.log('Response data:', data)
 
-      if (!res.ok) throw new Error('Subscription failed')
+      if (!res.ok) throw new Error(data.message || 'Subscription failed')
       
       toast.success('Thank you for subscribing!')
       form.reset()
     } catch (error) {
-      toast.error('Failed to subscribe. Please try again.')
+      console.error('Submission error:', error)
+      toast.error(error instanceof Error ? error.message : 'Failed to subscribe. Please try again.')
     }
   }
 
