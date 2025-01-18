@@ -13,4 +13,12 @@
 
 .text-accent {
   color: #40E0D0;
+}
+
+/* Add these iOS input resets */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
 } 

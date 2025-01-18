@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'page-bg': '#F6FFFF',
+        'page-bg': '#F7FFFF',
         'border': {
           DEFAULT: '#94A3B8',  // Darker than before (was gray-300)
           hover: '#0F172A',    // Almost black (was gray-800)
