@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="animate-fade-in">
       <Head>
         <title>Project Empyrean</title>
         <meta name="description" content="Project Empyrean - Seeking epistemically certain solutions to the fundamental problem of existence." />
@@ -45,20 +45,21 @@ export default function Home() {
 
       <Toaster position="top-center" />
       
-      {/* Logo - adjusted top margin */}
+      {/* Logo with animation */}
       <Image
         src="/Logo@3x.png"
         alt="Project Empyrean Logo"
         width={213}
         height={213}
-        className="mx-auto mt-12 md:mt-16"
+        className="mx-auto mt-12 md:mt-16 animate-fade-in"
         priority
         unoptimized
       />
+
       <main className="px-10 md:px-8 lg:px-16 py-12 md:py-16 max-w-3xl mx-auto">
         <div className="flex flex-col items-center space-y-12 md:space-y-16 w-full">
-          {/* Main Content */}
-          <article className="space-y-8 text-text leading-relaxed text-sm md:text-base text-justify w-full">
+          {/* Main Content with staggered animation */}
+          <article className="space-y-8 text-text leading-relaxed text-sm md:text-base text-justify w-full animate-fade-in delay-500">
             <p>
               The fundamental problem of existence is discontentment, that subjective phenomenon typically underlying all states of mental distress spanning from the subtlest of boredom to the most abject of suffering. It arises due to craving—personal attraction and aversion to objects of experience—and is resolved by its attenuation assisted by the experience of the desired object.
             </p>
@@ -76,7 +77,7 @@ export default function Home() {
           <hr className="w-full border-t border-gray-200 my-12 md:my-16" /> */}
 
           {/* Email Form and Contact - minimal design */}
-          <div className="w-full">
+          <div className="w-full animate-fade-in delay-700">
             <form 
               className="flex flex-col sm:flex-row gap-2"
               onSubmit={handleSubmit}
