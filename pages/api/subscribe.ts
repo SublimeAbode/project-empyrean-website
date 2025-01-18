@@ -1,66 +1,44 @@
-import type { NextRequest } from 'next/server'
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { neon } from '@neondatabase/serverless'
 
 const sql = neon(process.env.POSTGRES_URL!)
 
-export const config = {
-  runtime: 'edge',
-}
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  res.setHeader('Access-Control-Allow-Credentials', 'true')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
 
-export default async function handler(req: NextRequest) {
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end()
+  }
+
   if (req.method !== 'POST') {
-    return new Response(
-      JSON.stringify({ message: 'Method not allowed' }),
-      { status: 405, headers: { 'Content-Type': 'application/json' } }
-    )
+    return res.status(405).json({ message: 'Method not allowed' })
   }
 
   try {
-    const { email } = await req.json()
+    const email = req.body.email
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return new Response(
-        JSON.stringify({ message: 'Invalid email address' }),
-        { status: 400, headers: { 'Content-Type': 'application/json' } }
-      )
+      return res.status(400).json({ message: 'Invalid email address' })
     }
 
-    try {
-      await sql`
-        INSERT INTO subscribers (email)
-        VALUES (${email})
-        ON CONFLICT (email) DO NOTHING
-      `
-    } catch (dbError) {
-      if ((dbError as Error).message.includes('relation "subscribers" does not exist')) {
-        await sql`
-          CREATE TABLE IF NOT EXISTS subscribers (
-            email TEXT PRIMARY KEY,
-            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-          )
-        `
-        await sql`
-          INSERT INTO subscribers (email)
-          VALUES (${email})
-          ON CONFLICT (email) DO NOTHING
-        `
-      } else {
-        throw dbError
-      }
-    }
+    await sql`
+      INSERT INTO subscribers (email)
+      VALUES (${email})
+      ON CONFLICT (email) DO NOTHING
+    `
 
-    return new Response(
-      JSON.stringify({ message: 'Subscription successful' }),
-      { status: 200, headers: { 'Content-Type': 'application/json' } }
-    )
+    return res.status(200).json({ message: 'Subscription successful' })
   } catch (error) {
     console.error('Subscription error:', error)
-    return new Response(
-      JSON.stringify({ 
-        message: 'Internal server error',
-        details: process.env.NODE_ENV === 'development' ? (error as Error).message : undefined
-      }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
-    )
+    return res.status(500).json({ message: 'Internal server error' })
   }
 } 

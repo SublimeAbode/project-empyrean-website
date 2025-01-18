@@ -14,7 +14,7 @@ export default function Home() {
     console.log('Email to submit:', email)
 
     try {
-      const res = await fetch('https://project-empyrean.vercel.app/api/subscribe', {
+      const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -26,7 +26,7 @@ export default function Home() {
 
       if (!res.ok) throw new Error(data.message || 'Subscription failed')
       
-      toast.success('Thank you for subscribing!')
+      toast.success('Sign up success. Stay tuned for updates.')
       form.reset()
     } catch (error) {
       console.error('Submission error:', error)
@@ -38,7 +38,7 @@ export default function Home() {
     <>
       <Head>
         <title>Project Empyrean</title>
-        <meta name="description" content="Project Empyrean - Addressing the fundamental problem of subjective experience" />
+        <meta name="description" content="Project Empyrean - Seeking epistemically certain solutions to the fundamental problem of existence." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
