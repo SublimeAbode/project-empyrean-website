@@ -45,4 +45,9 @@ input {
 
 .delay-700 {
   animation-delay: 700ms;
+}
+
+[data-sonner-toaster] {
+  position: fixed !important;
+  top: 20px !important;
 } 
