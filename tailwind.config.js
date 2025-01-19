@@ -7,14 +7,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'page-bg': '#F7FFFF',
+        'page-bg': {
+          DEFAULT: '#F8FFFF',
+          dark: '#000000'
+        },
         'border': {
-          DEFAULT: '#94A3B8',  // Darker than before (was gray-300)
-          hover: '#0F172A',    // Almost black (was gray-800)
+          DEFAULT: '#404040',
+          hover: '#000000',
+          dark: '#D4D4D4',
+          'dark-hover': '#FFFFFF'
         },
         'text': {
-          DEFAULT: '#0F172A',  // Almost black (was gray-800)
-          dark: '#020617',     // Pure black (was gray-900)
+          DEFAULT: '#000000',
+          dark: '#FFFFFF',
+          'dark-dark': '#FFFFFF'
         }
       },
     },
