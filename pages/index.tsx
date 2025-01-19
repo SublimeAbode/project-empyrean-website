@@ -53,6 +53,7 @@ export default function Home() {
           <meta name="description" content="Project Empyrean - Seeking epistemically certain solutions to the fundamental problem of existence." />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta name="text-size-adjust" content="100%" />
+          <link rel="icon" type="image/png" href="/favicon.png" />
         </Head>
         
         {/* Logo with animation */}
