@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'page-bg': {
-          DEFAULT: '#F8FFFF',
+          DEFAULT: '#FFFFFF',
           dark: '#000000'
         },
         'border': {
