@@ -75,15 +75,12 @@ export default function Home() {
             {/* Main Content with staggered animation */}
             <article className="space-y-8 text-text dark:text-text-dark leading-relaxed text-sm md:text-base text-justify w-full animate-fade-in delay-500">
               <p>
-                The fundamental problem of existence is discontentment, that subjective phenomenon typically underlying all states of mental distress spanning from the subtlest of boredom to the most abject of suffering. It arises due to craving—personal attraction and aversion to objects of experience—and is resolved by its attenuation assisted by the experience of the desired object.
-              </p>
-
-              <p>
-                Insofar as the tendency of craving and the experience of the desired is governed by causality, there lies the potential for the minimization and extinction of discontentment through skillful volitional action.
-              </p>
-
-              <p>
-                Project Empyrean seeks epistemically certain solutions to this fundemental problem of discontentment in the form of true knowledge by which volition may be constrained in such a manner leading to the highest possible attainment of happiness and contentment.
+                Insofar as all shades of suffering are governed by causality
+                within range of volition, Project Empyrean seeks epistemically
+                certain solutions by which volition may be optimally constrained
+                for the indefinite minimization of all states of stress in both
+                current and subsequent lives. In other words, transcending human
+                existence into the heavens and beyond.
               </p>
             </article>
 
