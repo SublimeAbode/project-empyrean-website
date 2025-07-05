@@ -75,12 +75,7 @@ export default function Home() {
             {/* Main Content with staggered animation */}
             <article className="space-y-8 text-text dark:text-text-dark leading-relaxed text-sm md:text-base text-justify w-full animate-fade-in delay-500">
               <p>
-                Insofar as all shades of suffering are governed by causality
-                within range of volition, Project Empyrean seeks epistemically
-                certain solutions by which volition may be optimally constrained
-                for the indefinite minimization of all states of stress in both
-                current and subsequent lives. In other words, transcending human
-                existence into the heavens and beyond.
+                Insofar as all shades of suffering inverse to happiness are governed by causality within range of volition, Project Empyrean seeks epistemically certain solutions by which volitional formations may be optimally constrained for the indefinite minimization of all states of suffering in both current, and especially subsequent existences. In other words, transcending ordinary human existence into the heavens and beyond.
               </p>
             </article>
 
